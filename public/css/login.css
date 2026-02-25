@@ -1,0 +1,181 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  /* Adjust for nav */
+  position: relative;
+}
+
+/* Digital Noise Texture */
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Vertical Light Streak */
+.login-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--neon-cyan), transparent);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.login-panel {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(13, 13, 20, 0.95);
+  border: 1px solid var(--neon-cyan);
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.login-panel h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan);
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  animation: flicker 3s infinite;
+}
+
+.login-panel h2 {
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+}
+
+.form-group input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0, 245, 255, 0.3);
+  color: var(--text-main);
+  padding: 10px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  border-radius: 0;
+}
+
+.form-group input:focus {
+  border-bottom-color: var(--neon-cyan);
+  box-shadow: none;
+}
+
+/* Blinking Caret Effect */
+.form-group input:focus+.caret {
+  display: block;
+}
+
+.caret {
+  display: none;
+  position: absolute;
+  bottom: 12px;
+  right: 0;
+  width: 8px;
+  height: 1.2rem;
+  background: var(--neon-cyan);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    opacity: 1;
+    text-shadow: var(--glow-cyan);
+  }
+
+  20%,
+  24%,
+  55%,
+  56% {
+    opacity: 0.7;
+    text-shadow: none;
+  }
+}
+
+.error {
+  color: var(--aggr-red);
+  margin-top: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  background: rgba(255, 0, 51, 0.05);
+  padding: 12px;
+  border-left: 2px solid var(--aggr-red);
+}
+
+.success {
+  color: var(--neon-cyan);
+  margin-top: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  background: rgba(0, 245, 255, 0.05);
+  padding: 12px;
+  border-left: 2px solid var(--neon-cyan);
+}
+
+.login-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.login-actions button {
+  width: 100%;
+  padding: 15px;
+  letter-spacing: 2px;
+}

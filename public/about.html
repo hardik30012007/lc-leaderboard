@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>System Protocol - LC Leaderboard</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body class="arena-theme">
+  <nav class="nav">
+    <div class="brand">LC_ARENA<span class="dot"></span></div>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">SYSTEM</a>
+      <a href="login.html">ACCESS</a>
+    </div>
+  </nav>
+
+  <main class="content-container">
+    <section class="system-panel">
+      <h1 class="system-title">SYSTEM PROTOCOL INFORMATION</h1>
+
+      <div class="log-container">
+        <div class="log-line">
+          <span class="tag tag-system">[SYSTEM]</span>
+          <span>Initializing <span class="keyword-highlight">Leaderboard</span> environment... Core protocols
+            active.</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="log-line">
+          <span class="tag tag-info">[INFO]</span>
+          <span>This deployment facilitates a real-time tracking interface for competitive <span
+              class="keyword-highlight">Rank</span> monitoring using public LeetCode profiles.</span>
+        </div>
+
+        <div class="log-line">
+          <span class="tag tag-info">[INFO]</span>
+          <span>Operator profiles are aggregated and sorted based on total resolved challenges across all difficulty
+            tiers.</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="log-line">
+          <span class="tag tag-system">[SYSTEM]</span>
+          <span>Data acquisition interface: LeetCode <span class="keyword-highlight">GraphQL</span> endpoint.</span>
+        </div>
+
+        <div class="log-line">
+          <span class="tag tag-warning">[WARNING]</span>
+          <span>External API response latency may affect update intervals. If a sync fails, operator counts will default
+            to zero.</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="log-line">
+          <span class="tag tag-system">[SYSTEM]</span>
+          <span>Protocol Roadmap: Profile integration, removal sequences, and automated sync-checkers are currently
+            operational. Future updates may include per-day telemetry.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

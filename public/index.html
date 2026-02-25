@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LeetCode Leaderboard</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="arena-theme">
+  <div class="bg-streaks">
+    <div class="streak" style="--x:10%; --d:5s"></div>
+    <div class="streak" style="--x:30%; --d:7s"></div>
+    <div class="streak" style="--x:50%; --d:4s"></div>
+    <div class="streak" style="--x:70%; --d:8s"></div>
+    <div class="streak" style="--x:90%; --d:6s"></div>
+  </div>
+  <nav class="nav">
+    <div class="brand">LC_ARENA<span class="dot"></span></div>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">SYSTEM</a>
+      <a href="login.html">ACCESS</a>
+      <span id="userInfo" style="margin-left:12px; color:var(--muted)"></span>
+      <button id="logoutBtn" class="ghost"
+        style="padding:6px 12px; font-size:13px; margin-left:8px; display:none;">Logout</button>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="arena-container">
+      <h1 class="arena-title">FRIENDS RANKING ARENA</h1>
+      <div class="arena-divider"></div>
+
+      <div class="row controls">
+        <input id="username" placeholder="Enter operator username..." />
+        <button id="addBtn">DEPLOY</button>
+        <button id="refreshBtn" class="ghost">SYNC DATA</button>
+      </div>
+
+      <ul id="list" class="leaderboard"></ul>
+    </section>
+  </main>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

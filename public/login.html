@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Access Control - LC Leaderboard</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="arena-theme">
+  <div class="bg-streaks">
+    <div class="streak" style="--x:15%; --d:6s"></div>
+    <div class="streak" style="--x:85%; --d:9s"></div>
+  </div>
+
+  <nav class="nav">
+    <div class="brand">LC_ARENA<span class="dot"></span></div>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">SYSTEM</a>
+      <a href="login.html">ACCESS</a>
+    </div>
+  </nav>
+
+  <div class="login-container">
+    <section class="login-panel">
+      <h1>ACCESS CONTROL SYSTEM</h1>
+
+      <div id="loginForm">
+        <h2>Identity Verification Required</h2>
+        <div class="form-group">
+          <div class="input-wrapper">
+            <label class="input-label">> USERNAME</label>
+            <input id="username" type="text" placeholder="Enter Operator ID..." />
+            <div class="caret"></div>
+          </div>
+
+          <div class="input-wrapper">
+            <label class="input-label">> PASSCODE</label>
+            <input id="password" type="password" placeholder="••••••••" />
+            <div class="caret"></div>
+          </div>
+
+          <div class="login-actions">
+            <button id="loginBtn" onclick="login()">INITIATE SESSION</button>
+            <button id="signupBtn" class="ghost" onclick="signup()">REGISTER OPERATOR</button>
+          </div>
+        </div>
+        <div id="message"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+
+</html>
